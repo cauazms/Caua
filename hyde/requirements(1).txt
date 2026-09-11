@@ -1,8 +1,0 @@
-streamlit
-python-dotenv
-langchain-openai
-langchain-core
-langchain-huggingface
-langchain-community
-sentence-transformers
-faiss-cpu
