@@ -1,7 +1,58 @@
-#Exercicio 01 - Hello World -> https://www.youtube.com/watch?v=nIHq1MtJaKs&list=PLHz_AreHm4dm6wYOIW20Nyg12TAjmMGT-&index=1&pp=iAQB
-
-print(('==*==')*20)
-print('Bem vindo(a) ao meu primeiro programa')
-print(('==*==')*20)
-
-print("Hello World")
+                 ┌──────────────────────┐
+                 │      USUÁRIO         │
+                 │ Digita uma pergunta  │
+                 └──────────┬───────────┘
+                            │
+                            ▼
+                 ┌──────────────────────┐
+                 │    INTERFACE WEB     │
+                 │      Streamlit       │
+                 └──────────┬───────────┘
+                            │
+                            ▼
+                 ┌──────────────────────┐
+                 │        HyDE          │
+                 │                      │
+                 │ Cria uma hipótese    │
+                 │ documental           │
+                 └──────────┬───────────┘
+                            │
+                            ▼
+                 ┌──────────────────────┐
+                 │      EMBEDDING       │
+                 │                      │
+                 │ Converte a hipótese  │
+                 │ em vetor             │
+                 └──────────┬───────────┘
+                            │
+                            ▼
+                 ┌──────────────────────┐
+                 │        FAISS         │
+                 │                      │
+                 │ Busca os documentos  │
+                 │ semanticamente       │
+                 │ Top-K = 5            │
+                 └──────────┬───────────┘
+                            │
+                            ▼
+                 ┌──────────────────────┐
+                 │ DOCUMENTOS           │
+                 │ RECUPERADOS          │
+                 │                      │
+                 │ Contexto relevante   │
+                 └──────────┬───────────┘
+                            │
+                            ▼
+                 ┌──────────────────────┐
+                 │      LLM             │
+                 │   OpenRouter         │
+                 │ GPT-OSS-20B          │
+                 └──────────┬───────────┘
+                            │
+                            ▼
+                 ┌──────────────────────┐
+                 │       RESPOSTA       │
+                 │                      │
+                 │ Baseada somente nos  │
+                 │ documentos           │
+                 └──────────────────────┘
