@@ -1,0 +1,58 @@
+                 ┌──────────────────────┐
+                 │      USUÁRIO         │
+                 │ Digita uma pergunta  │
+                 └──────────┬───────────┘
+                            │
+                            ▼
+                 ┌──────────────────────┐
+                 │    INTERFACE WEB     │
+                 │      Streamlit       │
+                 └──────────┬───────────┘
+                            │
+                            ▼
+                 ┌──────────────────────┐
+                 │        HyDE          │
+                 │                      │
+                 │ Cria uma hipótese    │
+                 │ documental           │
+                 └──────────┬───────────┘
+                            │
+                            ▼
+                 ┌──────────────────────┐
+                 │      EMBEDDING       │
+                 │                      │
+                 │ Converte a hipótese  │
+                 │ em vetor             │
+                 └──────────┬───────────┘
+                            │
+                            ▼
+                 ┌──────────────────────┐
+                 │        FAISS         │
+                 │                      │
+                 │ Busca os documentos  │
+                 │ semanticamente       │
+                 │ Top-K = 5            │
+                 └──────────┬───────────┘
+                            │
+                            ▼
+                 ┌──────────────────────┐
+                 │ DOCUMENTOS           │
+                 │ RECUPERADOS          │
+                 │                      │
+                 │ Contexto relevante   │
+                 └──────────┬───────────┘
+                            │
+                            ▼
+                 ┌──────────────────────┐
+                 │      LLM             │
+                 │   OpenRouter         │
+                 │ GPT-OSS-20B          │
+                 └──────────┬───────────┘
+                            │
+                            ▼
+                 ┌──────────────────────┐
+                 │       RESPOSTA       │
+                 │                      │
+                 │ Baseada somente nos  │
+                 │ documentos           │
+                 └──────────────────────┘
