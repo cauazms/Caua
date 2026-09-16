@@ -1,0 +1,79 @@
+﻿CNES,ESTABELECIMENTO,ENDERECO_GEO,OSM_NOME,OSM_TIPO,OSM_ID,OSM_URL,SCORE_OSM,LATITUDE,LONGITUDE,STATUS_GEO
+0478024,UBS LUZ DA ESPERANCA,"Rua Jose Toschi, São José do Rio Preto, São Paulo, 15056-802",,,,,,-20.773125569753,-49.317187279529,Pendente
+0478849,UBS FRATERNIDADE,"15082-454, São José do Rio Preto, São Paulo",,,,,,-20.877548791877,-49.33981437671,Pendente
+2037068,IAMSPE DE SAO JOSE DO RIO PRETO,"Avenida Floriano Andre Cabrera, Jardim São Marcos, São José do Rio Preto, São Paulo, 15053",,,,,,-20.838698235436,-49.367437487416,Pendente
+2052474,COMPLEXO DE SAUDE UNIMED SAO JOSE DO RIO PRETO,"Avenida Bady Bassitt 4870, São José Do Rio Preto, São Paulo, 15025-000",,,,,,-20.818553017834,-49.396990020479,Pendente
+2058901,IMC INSTITUTO DE MOLESTIAS CARDIOVASCULARES,"Rua Castelo D Agua 3030, São José Do Rio Preto, São Paulo, 15090-030",,,,,,-20.822480987209,-49.390908027715,Pendente
+2077396,HOSPITAL DE BASE DE SAO JOSE DO RIO PRETO,"Avenida Brigadeiro Faria Lima 5544, São José Do Rio Preto, São Paulo, 15090-000",,,,,,-20.828473000242,-49.397166040445,Pendente
+2080761,HOSPITAL DO CORACAO DO IMC,"Rua Ondina 667, Vila Redentora, São José Do Rio Preto, São Paulo, 15015-205",,,,,,-20.822620503987,-49.39148847451,Pendente
+2096749,UBS CENTRAL,"Avenida Philadelpho Manoel Gouveia Netto 3165, Vila Maceno, São José do Rio Preto, São Paulo, 15060-040",,,,,,-20.808325492132,-49.37522180038,Pendente
+2096757,UBS ENGENHEIRO SCHIMIT,"Rua Otávio Zanetoni 158, Jardim Schimidt, São José Do Rio Preto, São Paulo, 15062-537",,,,,,-20.868298397804,-49.307087990133,Pendente
+2096781,UBS VILA TONINHO,"Rua Odilon Amadeu, Vila Toninho, São José do Rio Preto, São Paulo, 15077-300",,,,,,-20.842132904322,-49.343141955545,Pendente
+2096803,UBS GONZAGA DE CAMPOS,"Avenida Feliciano Salles Cunha 2140, Gonzaga De Campos, São José Do Rio Preto, São Paulo, 15035-274",,,,,,-20.811814302957,-49.423711108707,Pendente
+2096838,UBS ELDORADO,"Avenida Monte Aprazível 3269, Eldorado, São José do Rio Preto, São Paulo, 15043-450",,,,,,-20.788640649912,-49.401269590232,Pendente
+2096846,UBS ANCHIETA,"Avenida Maria da Silva Dória 555, Jardim Sônia, São José do Rio Preto, São Paulo, 15050-680",,,,,,-20.785877432651,-49.372742088298,Pendente
+2096862,UBS TALHADO,"Rua Ezequiel Pinto 142, Talhado, São José do Rio Preto, São Paulo, 15102-010",,,,,,-20.708976899199,-49.295077953836,Pendente
+2096919,UBS SAO DEOCLECIANO,"Rua João José Lucania Fernandes, Conjunto Habitacional São Deocleciano, São José do Rio Preto, São Paulo, 15057-200",,,,,,-20.789955583818,-49.343975033871,Pendente
+2096927,UBS VILA MAYOR,"Avenida Domingos Falavina 801, São José Do Rio Preto, São Paulo, 15045-395",,,,,,-20.782060013517,-49.387046987837,Pendente
+2096935,UBS SOLO SAGRADO,"Rua Beatriz Da Conceicao 406, São José Do Rio Preto, São Paulo, 15044-025",,,,,,-20.780207990101,-49.409799999283,Pendente
+2096943,UBS JOAO PAULO II JAGUARE,"Rua José Leite Arabone 400, Jardim João Paulo II, São José do Rio Preto, São Paulo, 15053-110",,,,,,-20.775918675419,-49.363621893215,Pendente
+2096978,UBS SAO FRANCISCO,"Rua Jose Secco 750, São José Do Rio Preto, São Paulo, 15086-040",,,,,,-20.845048004224,-49.378173988954,Pendente
+2096986,UBS VETORAZZO,"Avenida Fortunato Ernesto Vetorasso 711, São José Do Rio Preto, São Paulo, 15040-300",,,,,,-20.797275011799,-49.41229596241,Pendente
+2096994,UBS JARDIM AMERICANO,"Avenida Doutor Antonio Tavares Pereira Lima 755, São José Do Rio Preto, São Paulo, 15061-220",,,,,,-20.800069999322,-49.359528026245,Pendente
+2097001,UBS VILA ELVIRA,"Avenida Major Leo Lerro 558, São José Do Rio Preto, São Paulo, 15070-240",,,,,,-20.814885013185,-49.363197036722,Pendente
+2097028,UBS PARQUE INDUSTRIAL,UBS Parque Industrial,,,,,,-20.7979168,-49.3865746,Pendente
+2097036,AMBULATORIO DE DOENCAS CRONICAS TRANSMISSIVEIS,"Rua do Rosário 1903, Vila Curti, São José do Rio Preto, São Paulo, 15030-560",,,,,,-20.796224194612,-49.380213087719,Pendente
+2097087,UBS SOLIDARIEDADE S J R PRETO I FELICIDADE,"Rua Adrielle Caroline Amaral 350, Residencial Santana, São José Do Rio Preto, São Paulo, 15051-651",,,,,,-20.745846210395,-49.362538302952,Pendente
+2097095,UBS JARDIM SIMOES RENASCER,"Rua Alberto Bechara Hage 405, Parque Juruti, São José Do Rio Preto, São Paulo, 15046-500",,,,,,-20.768064414509,-49.384351619233,Pendente
+2097109,UBS CIDADANIA,"Rua Joao Gagliardo 105, São José Do Rio Preto, São Paulo, 15047-234",,,,,,-20.751894004993,-49.406062005742,Pendente
+2097117,HOSPITAL AUSTA SAO JOSE DO RIO PRETO,"Avenida Murchid Homsi 1385, Parque Residencial Mancor Daud, São José Do Rio Preto, São Paulo, 15070-650",,,,,,-20.822866387117,-49.365415307398,Pendente
+2097125,LABORCLIN,"Rua Rio Preto 3203, São José Do Rio Preto, São Paulo, 15015-760",,,,,,-20.821219007867,-49.389535993985,Pendente
+2097613,HOSPITAL INFANTE D HENRIQUE,"Rua Luiz Vaz de Camões 3150, Vila Redentora, São José Do Rio Preto, São Paulo, 15015-750",,,,,,-20.822683996904,-49.389535910166,Pendente
+2097648,HOSPITAL BEZERRA DE MENEZES,"Rua João Batista Franca 298, Vila Curti, São José Do Rio Preto, São Paulo, 15025-610",,,,,,-20.793575114009,-49.380960217389,Pendente
+2705036,BANCO DE SANGUE DA BENEFICENCIA PORTUGUESA,"Rua Luiz Vaz de Camões 3150, Vila Redentora, São José Do Rio Preto, São Paulo, 15015-750",,,,,,-20.822683996904,-49.389535910166,Pendente
+2705389,HEMAT SAO JOSE DO RIO PRETO,"Rua Cila, Vila Imperial, São José do Rio Preto, São Paulo, 15015-800",,,,,,-20.816232948944,-49.389349119453,Pendente
+2705451,LABORATORIO DR TAJARA,"Avenida Jose Munia 7000, São José Do Rio Preto, São Paulo, 15085-895",,,,,,-20.845639012216,-49.394438988247,Pendente
+2705680,UBS SANTO ANTONIO,"Rua Ida Tagliavini Polachini 580, São José Do Rio Preto, São Paulo, 15047-162",,,,,,-20.762344980967,-49.396494985277,Pendente
+2758288,UBS ESTORIL HIGIENOPOLIS,"Rua Sara Jabur 284, Higienópolis, São José do Rio Preto, São Paulo, 15085-505",,,,,,-20.839683757373,-49.383185532556,Pendente
+2758350,LABORATORIO TAJARA FILIAL SAO JOSE DO RIO PRETO,"Rua Cila 3092, São José Do Rio Preto, São Paulo, 15015-810",,,,,,-20.818484998689,-49.387091998657,Pendente
+2793342,ULTRA X FILIAL HOSPITAL AUSTA SAO JOSE RIO PRETO,"Avenida Murchid Homsi 1385, Parque Residencial Mancor Daud, São José Do Rio Preto, São Paulo, 15070-650",,,,,,-20.822866387117,-49.365415307398,Pendente
+2793350,ULTRAX SANTA CASA SAO JOSE DO RIO PRETO,"Rua Fritz Jacobs 1236, São José Do Rio Preto, São Paulo, 15025-500",,,,,,-20.804098006712,-49.386527980392,Pendente
+2797844,HOSPITAL SANTA HELENA SAO JOSE DO RIO PRETO,"Rua Voluntarios De Sao Paulo 3637, São José Do Rio Preto, São Paulo, 15015-200",,,,,,-20.815998004198,-49.384563010831,Pendente
+2798298,SANTA CASA DE MISERICORDIA DE SAO JOSE DO RIO PRETO,"Rua Fritz Jacobs 1236, Boa Vista, São José do Rio Preto, São Paulo, 15025-500",,,,,,-20.800721610509,-49.382973230379,Pendente
+2804832,ULTRA X,"Rua Cila 3033, São José Do Rio Preto, São Paulo, 15015-800",,,,,,-20.818105005109,-49.387330966716,Pendente
+3017745,NUCLEO DE DIAGNOSTICO E HOSPITAL DIA,"Avenida Philadelpho Manoel Gouveia Netto 2250, Boa Vista, São José do Rio Preto, São Paulo, 15030-790",,,,,,-20.801699782585,-49.378321681012,Pendente
+3409740,UBS JARDIM MARIA LUCIA,"Rua Almirante Tamandaré 1150, Jardim Maria Lúcia, São José Do Rio Preto, São Paulo, 15047-104",,,,,,-20.768676083893,-49.410552191274,Pendente
+3529282,HOSPITAL MUNICIPAL DOMINGO MARCOLINO BRAILE FUNFARME,"Avenida Jose Rodrigues Lisboa 201, São José Do Rio Preto, São Paulo, 15041-215",,,,,,-20.789158018673,-49.414136963624,Pendente
+3850757,UBS CIDADE JARDIM,"Avenida Lotf João Bassitt 1900, Residencial Cidade Jardim, São José do Rio Preto, São Paulo, 15081-260",,,,,,-20.847184337311,-49.361472357281,Pendente
+4198832,POSTO DE COLETA LABORATORIO TAJARA UNIDADE DAMHA,"Avenida Sílvio Della Roveri 338, Jardim Yolanda, São José do Rio Preto, São Paulo, 15061-580",,,,,,-20.804569317059,-49.348515946108,Pendente
+4269373,ANWAR FAUSTO FELIX SABBAG CLINICA MEDICA,"Avenida Da Luz 880, São José Do Rio Preto, São Paulo, 15020-360",,,,,,-20.822561998303,-49.403823031766,Pendente
+4361725,LABORATORIO AUSTA,"Avenida Murchid Homsi 1445, São José Do Rio Preto, São Paulo, 15070-650",,,,,,-20.823570005979,-49.36529301543,Pendente
+4376439,HOSPITAL RIO PRETO,"Avenida Anísio Haddad, São José do Rio Preto, São Paulo, 15090",,,,,,-20.857100015927,-49.40427890873,Pendente
+4447255,A CLINICAS,"Rua Santo Agostinho 167, São José Do Rio Preto, São Paulo, 15025-220",,,,,,-20.813435991673,-49.397140978555,Pendente
+4454421,ADRIANA SOLDA RODINO,"Rua Jair Martins Mil Homens 500, São José Do Rio Preto, São Paulo, 15090-080",,,,,,-20.826635016513,-49.389492994821,Pendente
+4455894,CENTRO MEDICO DE ESPECIALIDADES DA REGIAO NORTE,"Rua Ida Tagliavini Polachini 400, Jardim Santo Antônio, São José do Rio Preto, São Paulo, 15047-162",,,,,,-20.761906788419,-49.395495516359,Pendente
+4510968,TELEMEDICINA SAO JOSE DO RIO PRETO,"Avenida Philadelpho Manoel Gouveia Netto 2050, São José Do Rio Preto, São Paulo, 15050-465",,,,,,-20.798314996435,-49.377677025915,Pendente
+4648285,TELE UPA,"Avenida Romeu Strazzi 199, São José Do Rio Preto, São Paulo, 15084-010",,,,,,-20.825587991078,-49.382797027651,Pendente
+4792467,UNIMED RIO PRETO LABORATORIO,"Rua Antonio De Godoy 4180, São José Do Rio Preto, São Paulo, 15015-100",,,,,,-20.820808001245,-49.386990996724,Pendente
+5776643,A DE CARVALHO CLINICA,"Rua Silva Jardim 2506, São José Do Rio Preto, São Paulo, 15025-065",,,,,,-20.808851006817,-49.384840032731,Pendente
+6056148,AME AMBULATORIO MED DE ESPECIALIDADES DE S J DO RIO PRETO,"Rua Antônio Fuscaldo, Jardim Fuscaldo, São José do Rio Preto, São Paulo, 15061-260",,,,,,-20.805940205527,-49.359683362144,Pendente
+6236596,HOSPITAL ESTADUAL JOAO PAULO II SAO JOSE DO RIO PRETO,"Avenida Lino Jose De Seixas 1455, São José Do Rio Preto, São Paulo, 15061-060",,,,,,-20.806925013106,-49.359961035363,Pendente
+6252869,AUSTACOR,"Avenida Murchid Homsi 1385, Parque Residencial Mancor Daud, São José Do Rio Preto, São Paulo, 15070-650",,,,,,-20.822866387117,-49.365415307398,Pendente
+6270093,UPA REGIAO NORTE,"Rua Manoel Moreno & Rua Josepha Voltarelli Sanfelice, Jardim Antunes, São José do Rio Preto, São Paulo, 15047-050",,,,,,-20.777464593191,-49.403607700674,Pendente
+6270107,UPA SANTO ANTONIO,"Rua Ida Tagliavini Polachini 580, São José Do Rio Preto, São Paulo, 15047-162",,,,,,-20.762344980967,-49.396494985277,Pendente
+6270123,PRONTO SOCORRO VILA TONINHO,"Rua Maria Onofre Lopes Santos 610, Estância Jockey Clube, São José Do Rio Preto, São Paulo, 15077-030",,,,,,-20.843824413998,-49.344714018211,Pendente
+6270131,UPA JAGUARE,"Avenida Danillo Galeazzi 2450, São José Do Rio Preto, São Paulo, 15051-005",,,,,,-20.777171017033,-49.366614003371,Pendente
+6383106,UBS CAIC CRISTO REI,"Avenida de Maio 17, Chácara Jockey Club, São José do Rio Preto, São Paulo, 15075-350",,,,,,-20.831124148683,-49.350368245813,Pendente
+6410367,UBS JARDIM GABRIELA,"Rua Aureliana Ferrari 250, Residencial Grabriela, São José do Rio Preto, São Paulo, 15042-068",,,,,,-20.790152295879,-49.429492782491,Pendente
+6491642,CAE SAD,"Avenida Philadelpho Manoel Gouveia Netto 2050, São José Do Rio Preto, São Paulo, 15050-465",,,,,,-20.798314996435,-49.377677025915,Pendente
+6668054,UNIDADE DE VACINACAO UNIMED,"Rua Antonio De Godoy 4180, São José Do Rio Preto, São Paulo, 15015-100",,,,,,-20.820808001245,-49.386990996724,Pendente
+7182651,UBS PARQUE NOVA ESPERANCA,"Rua Durvalino Venãncio de Godoy 121, Parque Nova Esperança, São José do Rio Preto, São Paulo, 15047-361",,,,,,-20.740923265458,-49.409699926494,Pendente
+7191766,CLINICA DE ENDOSCOPIA DIGESTIVA SANTA HELENA FILIAL,"Rua Doutor Raul Silva 333, São José Do Rio Preto, São Paulo, 15015-020",,,,,,-20.819932008544,-49.384629982237,Pendente
+7294336,CIRURGIA PLASTICA CANTARELLI,"Rua Maria Carolina Trevisan Fava 2001, Jardim Francisco Fernandes, São José do Rio Preto, São Paulo, 15090-330",,,,,,-20.840084771509,-49.39551155666,Pendente
+7408714,POSTO DE COLETA DR TAJARA INSTITUTO PRO CARDIACO,"Avenida Jose Munia 7350, São José Do Rio Preto, São Paulo, 15085-895",,,,,,-20.848286981158,-49.393969014936,Pendente
+7706766,UPA TANGARA ESTORIL,"Avenida Presidente Getulio Vargas 381, São José Do Rio Preto, São Paulo, 15086-080",,,,,,-20.8397399964,-49.374357959896,Pendente
+7751494,UBS LEALDADE E AMIZADE,"Rua Pedro Oliva 500, São José Do Rio Preto, São Paulo, 15054-622",,,,,,-20.75370701065,-49.329252005242,Pendente
+9661344,HEMAT POSTO DE COLETA BENEFICENCIA PORTUGUESA,"Rua Luiz Vaz De Camoes 3236, São José Do Rio Preto, São Paulo, 15015-750",,,,,,-20.822565015788,-49.389557032562,Pendente
+9661360,HEMAT CLINICA MEDICA,"Rua Ondina 20, São José Do Rio Preto, São Paulo, 15015-205",,,,,,-20.818467019507,-49.387284028059,Pendente
+9755144,ULTRA X MEDICINA DIAGNOSTICA UNIDADE BOA VISTA,"Rua Capitao Jose Verdi 1421, São José Do Rio Preto, São Paulo, 15025-530",,,,,,-20.802811007389,-49.387853997474,Pendente
+,,,,,,,,,,Não localizado no OpenStreetMap
