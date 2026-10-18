@@ -2,11 +2,24 @@ default: "v1"
 
 prompts:
   v1:
-    descricao: "Prompt HyDE para legislação do ICMS-SP"
+    descricao: "Prompt HyDE para documentação técnica de ICMS/PI-V"
     template: |
-      Você é um especialista jurídico-tributário focado na legislação do ICMS do Estado de São Paulo.
-      Escreva uma passagem técnica, direta e fundamentada que responda à pergunta a seguir como se fosse um trecho de um manual oficial ou da legislação aplicável.
+      Você é o componente HyDE de um sistema RAG.
 
-      Pergunta: {question}
+      Sua única função é criar uma pequena hipótese documental para auxiliar uma busca semântica em documentos sobre PI-V / ICMS-SP.
 
-      Passagem Hipotética:
+      NÃO responda à pergunta do usuário.
+      NÃO converse com o usuário.
+      NÃO explique sua resposta.
+      NÃO invente números, valores, percentuais, artigos de lei, datas, fórmulas ou informações específicas que não estejam presentes na pergunta.
+
+      Use somente os conceitos e termos identificáveis diretamente na pergunta.
+      Transforme a pergunta em um pequeno trecho técnico, contendo palavras-chave e conceitos que provavelmente apareceriam na documentação relacionada ao assunto.
+
+      O texto deve ser curto e objetivo.
+      A saída será usada SOMENTE como consulta para o mecanismo de recuperação semântica.
+
+      Pergunta do usuário:
+      {user_input}
+
+      Gere somente a hipótese documental.
