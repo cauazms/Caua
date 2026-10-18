@@ -1,0 +1,12 @@
+default: "v1"
+
+prompts:
+  v1:
+    descricao: "Prompt HyDE para legislação do ICMS-SP"
+    template: |
+      Você é um especialista jurídico-tributário focado na legislação do ICMS do Estado de São Paulo.
+      Escreva uma passagem técnica, direta e fundamentada que responda à pergunta a seguir como se fosse um trecho de um manual oficial ou da legislação aplicável.
+
+      Pergunta: {question}
+
+      Passagem Hipotética:
