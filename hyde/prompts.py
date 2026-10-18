@@ -2,9 +2,8 @@
 
 from pathlib import Path
 from string import Formatter
-
 import yaml
-
+from langchain_core.prompts import PromptTemplate
 
 PROMPTS_FILE = Path(__file__).parent / "prompts.yaml"
 
@@ -12,10 +11,8 @@ PROMPTS_FILE = Path(__file__).parent / "prompts.yaml"
 def carregar_prompt(versao=None):
     """
     Devolve (versao, template) do prompts.yaml.
-
     Se versao for None, usa a chave default do arquivo.
     """
-
     if not PROMPTS_FILE.exists():
         raise SystemExit(
             f"Arquivo de prompts não encontrado: {PROMPTS_FILE}"
@@ -36,16 +33,13 @@ def carregar_prompt(versao=None):
 
     if not versao:
         raise SystemExit(
-            f"Defina PROMPT_VERSION no .env ou "
-            f"a chave `default` em {PROMPTS_FILE.name}."
+            f"Defina PROMPT_VERSION no .env ou a chave `default` em {PROMPTS_FILE.name}."
         )
 
     if versao not in prompts:
         disponiveis = ", ".join(sorted(prompts))
-
         raise SystemExit(
-            f"Versão de prompt '{versao}' não existe em "
-            f"{PROMPTS_FILE.name}.\n"
+            f"Versão de prompt '{versao}' não existe em {PROMPTS_FILE.name}.\n"
             f"Disponíveis: {disponiveis}"
         )
 
@@ -56,7 +50,7 @@ def carregar_prompt(versao=None):
             f"A versão '{versao}' não tem o campo `template`."
         )
 
-    # Verifica os placeholders existentes no YAML
+    # Extrai os nomes dos campos para garantir consistência
     campos = {
         nome
         for _, nome, _, _ in Formatter().parse(template)
@@ -64,3 +58,9 @@ def carregar_prompt(versao=None):
     }
 
     return versao, template
+
+
+def obter_prompt_template(versao=None) -> PromptTemplate:
+    """Retorna uma instância de PromptTemplate pronta para o LangChain."""
+    versao_usada, template_str = carregar_prompt(versao)
+    return PromptTemplate.from_template(template_str)
