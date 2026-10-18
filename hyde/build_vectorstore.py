@@ -1,135 +1,88 @@
-from pathlib import Path
+import os
+import glob
+from dotenv import load_dotenv
+from pyspark.sql import SparkSession
+from pyspark.sql.types import StructType, StructField, StringType
+import docx2txt
 
-from langchain_community.document_loaders import Docx2txtLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_community.vectorstores import FAISS
+from langchain_openai import OpenAIEmbeddings
+from langchain_chroma import Chroma
 
+load_dotenv()
 
-# ============================================================
-# CONFIGURAÇÃO
-# ============================================================
+PERSIST_DIRECTORY = "vectorstore"
+DOCS_PATH = "documentos"
 
-BASE_DIR = Path(__file__).parent
-
-DOCUMENTOS_DIR = BASE_DIR / "documentos"
-VECTORSTORE_DIR = (BASE_DIR / "vectorstore").resolve()
-
-EMBEDDING_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
-
-
-# ============================================================
-# VERIFICA DOCUMENTOS
-# ============================================================
-
-arquivos_docx = list(DOCUMENTOS_DIR.glob("*.docx"))
-
-if not arquivos_docx:
-    raise SystemExit(
-        f"Nenhum arquivo .docx encontrado em:\n{DOCUMENTOS_DIR}"
+def init_spark():
+    return (
+        SparkSession.builder
+        .appName("HyDE-Ingestion-Spark")
+        .master("local[*]")
+        .config("spark.driver.memory", "4g")
+        .config("spark.sql.shuffle.partitions", "4")
+        .config("spark.ui.enabled", "false")
+        .getOrCreate()
     )
 
-print("Documentos encontrados:")
+def extract_text_from_docx(file_path: str) -> str:
+    try:
+        return docx2txt.process(file_path)
+    except Exception as e:
+        print(f"Erro ao ler {file_path}: {e}")
+        return ""
 
-for arquivo in arquivos_docx:
-    print(f"  - {arquivo.name}")
+def main():
+    print("Iniciando ingestao distribuida com Apache Spark...")
+    spark = init_spark()
 
+    docx_files = glob.glob(os.path.join(DOCS_PATH, "*.docx"))
+    if not docx_files:
+        print(f"Nenhum ficheiro .docx encontrado em '{DOCS_PATH}'.")
+        return
 
-# ============================================================
-# CARREGA OS DOCUMENTOS
-# ============================================================
+    records = []
+    for f in docx_files:
+        content = extract_text_from_docx(f)
+        if content.strip():
+            records.append((os.path.basename(f), content))
 
-documentos = []
+    schema = StructType([
+        StructField("filename", StringType(), False),
+        StructField("content", StringType(), False)
+    ])
 
-for arquivo in arquivos_docx:
-    print(f"\nCarregando: {arquivo.name}")
+    df_raw = spark.createDataFrame(records, schema=schema)
 
-    loader = Docx2txtLoader(str(arquivo))
-    docs = loader.load()
+    def chunk_partition(rows):
+        splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=150)
+        chunks = []
+        for row in rows:
+            splits = splitter.split_text(row.content)
+            for chunk in splits:
+                chunks.append((row.filename, chunk))
+        return chunks
 
-    documentos.extend(docs)
+    rdd_chunks = df_raw.rdd.mapPartitions(chunk_partition)
+    collected_chunks = rdd_chunks.collect()
 
-print(f"\nTotal de documentos carregados: {len(documentos)}")
+    print(f"Total de fragmentos processados pelo Spark: {len(collected_chunks)}")
 
+    texts = [item[1] for item in collected_chunks]
+    metadatas = [{"source": item[0]} for item in collected_chunks]
 
-# ============================================================
-# DIVISÃO EM CHUNKS
-# ============================================================
+    embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
+    
+    print(f"A guardar indices em '{PERSIST_DIRECTORY}'...")
+    Chroma.from_texts(
+        texts=texts,
+        embedding=embeddings,
+        metadatas=metadatas,
+        persist_directory=PERSIST_DIRECTORY
+    )
 
-text_splitter = RecursiveCharacterTextSplitter(
-    chunk_size=1000,
-    chunk_overlap=150,
-)
+    spark.stop()
+    print("Ingestao com Spark concluida!")
 
-documentos_divididos = text_splitter.split_documents(documentos)
-
-print(
-    f"Total de chunks gerados: "
-    f"{len(documentos_divididos)}"
-)
-
-
-# ============================================================
-# EMBEDDINGS
-# ============================================================
-
-print("\nCarregando modelo de embeddings...")
-
-embeddings = HuggingFaceEmbeddings(
-    model_name=EMBEDDING_MODEL,
-    model_kwargs={
-        "device": "cpu"
-    },
-    encode_kwargs={
-        "normalize_embeddings": True
-    },
-)
-
-print("Embeddings carregados.")
-
-
-# ============================================================
-# CRIA FAISS
-# ============================================================
-
-print("\nCriando banco vetorial FAISS...")
-
-vectorstore = FAISS.from_documents(
-    documentos_divididos,
-    embeddings
-)
-
-
-# ============================================================
-# SALVA BANCO VETORIAL
-# ============================================================
-
-VECTORSTORE_DIR.mkdir(
-    parents=True,
-    exist_ok=True
-)
-
-vectorstore.save_local(
-    str(VECTORSTORE_DIR)
-)
-
-
-# ============================================================
-# CONFIRMAÇÃO
-# ============================================================
-
-print("\n========================================")
-print("BANCO VETORIAL CRIADO COM SUCESSO!")
-print("========================================")
-
-print(f"\nLocal: {VECTORSTORE_DIR}")
-
-print("\nArquivos gerados:")
-
-print(
-    f"  - {VECTORSTORE_DIR / 'index.faiss'}"
-)
-
-print(
-    f"  - {VECTORSTORE_DIR / 'index.pkl'}"
-)
+if __name__ == "__main__":
+    main()
