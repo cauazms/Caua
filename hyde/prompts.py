@@ -3,64 +3,36 @@
 from pathlib import Path
 from string import Formatter
 import yaml
-from langchain_core.prompts import PromptTemplate
+from langchain_core.prompts import ChatPromptTemplate
 
 PROMPTS_FILE = Path(__file__).parent / "prompts.yaml"
 
-
 def carregar_prompt(versao=None):
-    """
-    Devolve (versao, template) do prompts.yaml.
-    Se versao for None, usa a chave default do arquivo.
-    """
+    """Devolve (versao, template) do prompts.yaml."""
     if not PROMPTS_FILE.exists():
-        raise SystemExit(
-            f"Arquivo de prompts não encontrado: {PROMPTS_FILE}"
-        )
+        raise SystemExit(f"Arquivo de prompts não encontrado: {PROMPTS_FILE}")
 
-    dados = yaml.safe_load(
-        PROMPTS_FILE.read_text(encoding="utf-8")
-    ) or {}
-
+    dados = yaml.safe_load(PROMPTS_FILE.read_text(encoding="utf-8")) or {}
     prompts = dados.get("prompts") or {}
 
     if not prompts:
-        raise SystemExit(
-            f"Nenhum prompt definido em {PROMPTS_FILE.name}."
-        )
+        raise SystemExit(f"Nenhum prompt definido em {PROMPTS_FILE.name}.")
 
     versao = versao or dados.get("default")
-
     if not versao:
-        raise SystemExit(
-            f"Defina PROMPT_VERSION no .env ou a chave `default` em {PROMPTS_FILE.name}."
-        )
+        raise SystemExit(f"Defina PROMPT_VERSION no .env ou a chave default em {PROMPTS_FILE.name}.")
 
     if versao not in prompts:
         disponiveis = ", ".join(sorted(prompts))
-        raise SystemExit(
-            f"Versão de prompt '{versao}' não existe em {PROMPTS_FILE.name}.\n"
-            f"Disponíveis: {disponiveis}"
-        )
+        raise SystemExit(f"Versão de prompt '{versao}' não existe em {PROMPTS_FILE.name}.\nDisponíveis: {disponiveis}")
 
     template = (prompts[versao] or {}).get("template")
-
     if not template:
-        raise SystemExit(
-            f"A versão '{versao}' não tem o campo `template`."
-        )
-
-    # Extrai os nomes dos campos para garantir consistência
-    campos = {
-        nome
-        for _, nome, _, _ in Formatter().parse(template)
-        if nome
-    }
+        raise SystemExit(f"A versão '{versao}' não tem o campo `template`.")
 
     return versao, template
 
-
-def obter_prompt_template(versao=None) -> PromptTemplate:
-    """Retorna uma instância de PromptTemplate pronta para o LangChain."""
-    versao_usada, template_str = carregar_prompt(versao)
-    return PromptTemplate.from_template(template_str)
+def obter_chat_prompt_template(versao=None) -> ChatPromptTemplate:
+    """Retorna ChatPromptTemplate configurado com o template versionado."""
+    _, template_str = carregar_prompt(versao)
+    return ChatPromptTemplate.from_template(template_str)
